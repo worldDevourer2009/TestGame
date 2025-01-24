@@ -1,0 +1,7 @@
+{
+  "name": "Joysticks",
+  "references": [
+    "UnityEditor",
+    "UnityEditor.TestRunner"
+  ]
+}
