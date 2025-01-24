@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Items
+namespace Configs
 {
     [CreateAssetMenu(menuName = "PickablesObjects", fileName = "PickableObjectConfig", order = 0)]
     public class PickableObjectConfig : ScriptableObject

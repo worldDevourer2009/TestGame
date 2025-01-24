@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 10
   throwForce: 10
-  pickUpRange: 10
+  pickUpRange: 17.72
   pickableLayer:
     serializedVersion: 2
     m_Bits: 8

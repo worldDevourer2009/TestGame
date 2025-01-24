@@ -1,5 +1,6 @@
 using Character;
 using Components;
+using Configs;
 using InputSystem;
 using UnityEngine;
 using Zenject;

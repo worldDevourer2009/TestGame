@@ -1,7 +1,9 @@
+using UnityEngine;
+
 namespace Components
 {
     public interface ICameraFollow
     {
-        void Follow();
+        void Follow(Vector2 direction);
     }
 }

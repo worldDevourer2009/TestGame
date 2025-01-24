@@ -1,4 +1,7 @@
-public interface IMoveCustom
+namespace Components
 {
-    void Move(float speed);
+    public interface IMoveCustom
+    {
+        void Move();
+    }
 }

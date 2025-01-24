@@ -1,16 +1,18 @@
 using System.Collections.Generic;
+using Configs;
 using Items;
 using UnityEngine;
+using Zenject;
 
 namespace Factories
 {
     public class PickableObjectsFactory : ICreatePickableObjects
     {
-        private readonly PickableObject.Factory _factory;
+        private readonly DiContainer _factory;
         private readonly Transform _parent;
         private readonly List<PickableObjectConfig> _list;
 
-        public PickableObjectsFactory(PickableObject.Factory factory, Transform parent, List<PickableObjectConfig> list)
+        public PickableObjectsFactory(DiContainer factory, Transform parent, List<PickableObjectConfig> list)
         {
             _factory = factory;
             _parent = parent;
@@ -21,7 +23,7 @@ namespace Factories
         { 
             var randomIndex = Random.Range(0, _list.Count);
             var prefab = _list[randomIndex].Prefab;
-            var pickableObject = _factory.Create(prefab);
+            var pickableObject = _factory.InstantiatePrefabForComponent<PickableObject>(prefab);
             pickableObject.transform.SetParent(_parent);
             pickableObject.transform.position = spawn.position;
         }

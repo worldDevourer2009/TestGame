@@ -1,4 +1,5 @@
 using System;
+using Configs;
 using InputSystem;
 using UnityEngine;
 using Zenject;
@@ -11,15 +12,18 @@ namespace Components
         
         private readonly IInput _input;
         private readonly CharacterController _characterController;
+        private readonly PlayerConfig _playerConfig;
         private readonly Transform _transform;
-        
+
+        private float Speed => _playerConfig.WalkSpeed;
         private float _verticalInput;
         private float _horizontalInput;
 
-        public MoveCustomComponent(IInput input, CharacterController characterController)
+        public MoveCustomComponent(IInput input, CharacterController characterController, PlayerConfig playerConfig)
         {
             _input = input;
             _characterController = characterController;
+            _playerConfig = playerConfig;
 
             if (_characterController == null)
             {
@@ -33,17 +37,14 @@ namespace Components
         public void Initialize()
         {
             _input.JoystickHorizontalInput += HandleHorizontalInput;
-            _input.JoystickHorizontalInput += HandleVerticalInput;
-            
-            Debug.Log("Init MoveCustomComponent");
+            _input.JoystickVerticalInput += HandleVerticalInput;
         }
 
-        public void Move(float speed)
+        public void Move()
         {
-            Debug.Log($"Horizontal input is {_horizontalInput} and vertical is {_verticalInput}");
             var moveDirection = _transform.forward * _verticalInput + _transform.right * _horizontalInput;
             moveDirection.y -= Gravity * Time.deltaTime;
-            _characterController.Move(moveDirection * speed * Time.deltaTime);
+            _characterController.Move(moveDirection * Speed * Time.deltaTime);
         }
 
         private void HandleHorizontalInput(float direction) => 

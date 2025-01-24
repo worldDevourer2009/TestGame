@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Zenject;
 
-namespace Input
+namespace InputSystem
 {
     public class InputManager : IInput, ITickable, IFixedTickable
     {

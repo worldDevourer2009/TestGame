@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 8787659090924837671}
   - component: {fileID: 1684469691892442328}
   - component: {fileID: -4985781323122599306}
-  - component: {fileID: 2526158411646283796}
   - component: {fileID: 7700661427126282418}
+  - component: {fileID: -4477765489765403986}
   m_Layer: 3
   m_Name: ShelfObject
-  m_TagString: Untagged
+  m_TagString: Pickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,22 +105,9 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8482710580864882704, guid: c3568e678d846a349a694e4904eb4247, type: 3}
---- !u!114 &2526158411646283796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8844533779588870160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7736d70adf74afc8a7d53ed5dd8b665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 7700661427126282418}
 --- !u!54 &7700661427126282418
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148,3 +135,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-4477765489765403986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844533779588870160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7736d70adf74afc8a7d53ed5dd8b665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

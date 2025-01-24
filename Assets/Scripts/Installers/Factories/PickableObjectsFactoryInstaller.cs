@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Configs;
 using Factories;
 using Items;
 using UnityEngine;
@@ -23,9 +24,6 @@ namespace Installers
                 .Bind<Transform>()
                 .FromInstance(parent)
                 .AsSingle();
-            
-            Container.BindFactory<Object, PickableObject, PickableObject.Factory>()
-                .FromFactory<PrefabFactory<PickableObject>>();
             
             Container
                 .Bind<ICreatePickableObjects>()

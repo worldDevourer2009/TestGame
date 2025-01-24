@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a85363c4d248ada60d7044f8deea6a, type: 3}
   m_Name: Camera Config
   m_EditorClassIdentifier: 
-  sensitivity: 9.11
-  maxAngleY: 80
+  sensitivity: 10
+  maxAngleY: 90
