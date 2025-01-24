@@ -8,6 +8,6 @@ namespace InputSystem
         event Action<float> JoystickHorizontalInput;
         event Action<float> JoystickVerticalInput;
         event Action<Vector2> TouchPosition;
-        event Action<Vector2> TapPosition;
+        event Action<Vector2> OnTap;
     }
 }

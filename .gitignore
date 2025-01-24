@@ -1,0 +1,37 @@
+# Unity Generated Files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+
+# Unity Crash Reports
+sysinfo.txt
+
+# Unity Asset Store Tools
+/Assets/AssetStoreTools*
+
+# Visual Studio Code
+.vscode/
+
+# Rider Project Files
+.idea/
+*.sln.iml
+*.sln.DotSettings.user
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+
+# Ignore other unwanted files
+*.tmp
+*.bak
+*.pidb.meta
+*.pidb
+*.booproj
+
+
